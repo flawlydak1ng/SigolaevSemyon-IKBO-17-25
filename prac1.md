@@ -84,9 +84,7 @@ h hello include int main n printf return stdio void world
 
 ```bash
 #!/bin/bash
-# Даём права на запуск (rwxr-xr-x) и копируем команду в /usr/local/bin
-chmod 755 "$1"
-cp "$1" /usr/local/bin/
+sudo install -m 755 "$1" "/usr/local/bin/$(basename "$1")"
 ```
 
 ```bash
